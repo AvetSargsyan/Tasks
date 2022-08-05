@@ -1,15 +1,15 @@
 "use strict";
 
-//1.Given the string 'ahb acb aeb aeeb adcb axeb'. Write a regular expression that matches the strings ahb, acb, aeb by pattern: letter 'a', any character, letter 'b'
-let str ='ahb acb aeb aeeb adcb axeb'.match(/a[a-z]b/g);
-console.log(str);
-
-//2.Given the string '2 + 3 223 2223'. Write a regexp that finds line 2 + 3 without capturing the rest
-let numStr = '2 + 3 223 2223';
-const reg =  /2...3/;
-console.log(numStr.match(reg));
-
-//3.Get the day, month and year of the current date and output it to the console separately
-const date = new Date();
-const now = [date.getDate(),date.getMonth(),date.getFullYear()]
-console.log(now);
+//In a try catch construction, wrap the code: console.log (a), let a = 3. And display an error - ‘let must be declared before use’. When running 1/0, the error 'cannot be divided by zero'
+try{
+    console.log (a);
+    let a = 3;
+} catch {
+    console.log("Let must be declared before use");
+};
+try {
+    let err = new Error ("Cannot be divided by zero")
+    if( 1/0 == Infinity) {
+        console.log(err.message);
+    }
+} catch { }

@@ -1,6 +1,6 @@
-# HomeWorkN1
+# HomeWorkN2
 Tasks:
-1.Install LST NodeJS version
-2.Initialize package.json
-3.Install fs-extra package globally
-4.Install fs-extra package globally with --save-dev
+1.Perform addition of various types (string + boolean, string + number, number + boolean)
+2.Perform multiplication of various types (string * boolean, string * number, number * boolean)
+3.Divide different types (string / boolean, string / number, number / Boolean)
+4.Perform explicit conversion (number, string, boolean)

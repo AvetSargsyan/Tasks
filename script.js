@@ -1,36 +1,65 @@
-"use strict" ;
+"use strict";
 
-let str = "text";
-let bool = true;
-let num = 3;
+// Create a car object, add a color property to it with the value equals 'black'
+const carObj = {};
+carObj.color = "black"
+console.log(carObj);
 
-//1.Perform addition of various types (string + boolean, string + number, number + boolean)
-console.group("Addition");
-console.log(str + bool);
-console.log(str + num);
-console.log(num + bool);
-console.groupEnd();
+// Change the color property of the car object to 'green'
+carObj.color = "green";
+console.log(carObj);
 
-//2.Perform multiplication of various types (string * boolean, string * number, number * boolean)
-console.group("Multiplication")
-console.log(str * bool);
-console.log(str * num);
-console.log(num * bool);
-console.groupEnd();
+// Add the power property to the car object, which is a function and displays the engine power to the console
+carObj.power = function(engPow){
+    console.log("red");
+};
 
-//3.Divide different types (string / boolean, string / number, number / Boolean)
-console.group("Divide");
-console.log(str / bool);
-console.log(str / num);
-console.log(num / bool);
-console.groupEnd();
+//Pears and apples are accepted to the warehouse, write a function that returns the result of adding the number of accepted pears and apples
+function sum (pearsNum, applesNum) {
+    let result = pearsNum + applesNum
+    return result;
+};
+console.log(sum(7,4));
 
-//4.Perform explicit conversion (number, string, boolean)
-console.group("Explicit conversion");
-console.log(String(num));
-console.log(String(bool));
-console.log(Number(str));
-console.log(Number(bool));
-console.log(Boolean(num));
-console.log(Boolean(str));
-console.groupEnd();
+//Your name is saved in the payment terminal, write a function to define the name in the terminal (if you entered your name, then hello + name, if not, then there is no such name)
+function verify(){
+    let name = prompt ("Write your name");
+    if (name == "Jack") {
+        alert(`Hello ${name}`);
+    } else {
+        alert(`There is no such name: ${name}`);
+    };
+};
+
+//Write a function for calculating the type of argument and type output to the console
+function typeOfArg (arg) {
+    console.log(typeof(arg));
+};
+typeOfArg(9);
+typeOfArg(false);
+
+//Write a function that determines whether a number is prime or not
+function primeNums (num) {
+    let prime = true;
+    if (!Number.isInteger(num)) {
+        return "Number isn't an integer"
+    };
+    if(num >1 ){
+        for(let i = 2; i<num ; i ++){
+            if(num % i == 0) {
+                prime = false;
+            };
+        };
+        if (prime) {
+            return "Number is a prime";
+        } else {
+            return "Number isn't a prime";
+        }
+    } else  {
+        return "Number isn't a prime";
+    };
+};
+console.log(primeNums(59.1));
+console.log(primeNums(1559));
+console.log(primeNums(7));
+console.log(primeNums(-5));

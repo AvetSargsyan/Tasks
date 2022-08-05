@@ -1,49 +1,84 @@
 "use strict";
-
-// Create a car object, add a color property to it with the value equals 'black'
-const carObj = {};
-carObj.color = "black"
-console.log(carObj);
-
-// Change the color property of the car object to 'green'
-carObj.color = "green";
-console.log(carObj);
-
-// Add the power property to the car object, which is a function and displays the engine power to the console
-carObj.power = function(engPow){
-    console.log("red");
+/*
+//1. Given an array consisting of movie names, iterate over the array with the output of the names of each .movie to the console.
+const movieNames = ["one","two","three","four","five","six","seven","eight","nine","ten"];
+for (let i =0; i<movieNames.length; i++) {
+    console.log(movieNames[i]);
 };
+*/
 
-//Pears and apples are accepted to the warehouse, write a function that returns the result of adding the number of accepted pears and apples
-function sum (pearsNum, applesNum) {
-    let result = pearsNum + applesNum
-    return result;
+/*
+//2.Given an array of car manufacturers, convert the array to a string and back to an array
+let carManufac = ["Toyota", "Ford", "Honda"];
+console.log(carManufac.join().split());
+*/
+
+/*
+//3.Given an array of the names of your friends, add the words hello to each element of the array
+let names = ["Michael", "Ares", "Henk"];
+for(let i =0 ;i < names.length ;i++) {
+    names[i] = "Hello " + names[i]; 
+}
+console.log(names);
+*/
+
+
+/*
+//4.Convert numeric array to Boolean
+let numArr = [1,6,8,0,-2].map(num =>Boolean(num));
+console.log(numArr);
+*/
+
+/*
+//5.Sort the array [1,6,7,8,3,4,5,6] in descending order
+let array =[1,6,7,8,3,4,5,6].sort((a,b)=> {
+    if (a<b) return 1;
+    if (a==b) return 0;
+    if (a>b) return -1;
+});
+console.log(array);
+*/
+
+/*
+//6.Filter array [1,6,7,8,3,4,5,6] by value > 3
+let arr = [1,6,7,8,3,4,5,6].filter((num)=>{
+    if (num > 3) return true
+});
+console.log(arr);
+*/
+
+/*
+//7.Write a function that takes two parameters - an array and a number and outputs the index of an array element equal to a number
+//If I understand you correctly..
+let arr = [1,9,7,3,4,5,0];
+let num = 4;
+function out (array,number){
+    arr.splice(num);
 };
-console.log(sum(7,4));
+out(arr,num);
+console.log(arr);
+*/
 
-//Your name is saved in the payment terminal, write a function to define the name in the terminal (if you entered your name, then hello + name, if not, then there is no such name)
-function verify(){
-    let name = prompt ("Write your name");
-    if (name == "Jack") {
-        alert(`Hello ${name}`);
+/*
+//8.Implement a loop that will print the number 'a' until it is less than 10
+let loop = (a) => {
+    if(a<10){
+        while(a<10) {
+            console.log(a);
+            a++;
+        };
     } else {
-        alert(`There is no such name: ${name}`);
+        console.log("a>=10");
     };
 };
+loop(1);
+*/
 
-//Write a function for calculating the type of argument and type output to the console
-function typeOfArg (arg) {
-    console.log(typeof(arg));
-};
-typeOfArg(9);
-typeOfArg(false);
-
-//Write a function that determines whether a number is prime or not
+/*
+//9.Implement a loop that prints prime numbers to the console
+//I hope I understood the task correctly
 function primeNums (num) {
     let prime = true;
-    if (!Number.isInteger(num)) {
-        return "Number isn't an integer"
-    };
     if(num >1 ){
         for(let i = 2; i<num ; i ++){
             if(num % i == 0) {
@@ -51,15 +86,23 @@ function primeNums (num) {
             };
         };
         if (prime) {
-            return "Number is a prime";
-        } else {
-            return "Number isn't a prime";
+            return num
         }
-    } else  {
-        return "Number isn't a prime";
     };
 };
-console.log(primeNums(59.1));
-console.log(primeNums(1559));
-console.log(primeNums(7));
-console.log(primeNums(-5));
+let arr=[1,99,5,44,78,31,53,68,0,-6,2].filter(num=>{if(primeNums(num)) {
+    console.log(num);
+}});
+*/
+
+/*
+//10.Implement a loop that prints odd numbers to the console
+function oddNums (num) {
+    if(num %2 !==0 && num !==2) {
+        return num
+    }
+};
+let arr=[1,2,3,99,5,0,44,-78,31,-53,68,1515252].filter(num=>{if(oddNums(num)) {
+    console.log(num);
+}});
+*/

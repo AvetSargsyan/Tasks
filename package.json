@@ -1,0 +1,15 @@
+{
+  "name": "taskN1",
+  "version": "1.0.0",
+  "description": "Tasks:\r 1.Install LST NodeJS version\r 2.Initialize package.json\r 3.Install fs-extra package globally\r 4.Install fs-extra package globally with --save-dev",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Avet",
+  "license": "ISC",
+  "devDependencies": {
+    "fs-extra": "^10.1.0"
+  }
+}

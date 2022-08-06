@@ -10,7 +10,7 @@ carObj.color = "green";
 console.log(carObj);
 
 // Add the power property to the car object, which is a function and displays the engine power to the console
-carObj.power = function(engPow){
+carObj.power = function(){
     console.log("red");
 };
 
@@ -21,13 +21,13 @@ function sum (pearsNum, applesNum) {
 };
 console.log(sum(7,4));
 
+
 //Your name is saved in the payment terminal, write a function to define the name in the terminal (if you entered your name, then hello + name, if not, then there is no such name)
-function verify(){
-    let name = prompt ("Write your name");
+function verify(name){
     if (name == "Jack") {
-        alert(`Hello ${name}`);
+        console.log(`Hello ${name}`);
     } else {
-        alert(`There is no such name: ${name}`);
+        console.log(`There is no such name: ${name}`);
     };
 };
 

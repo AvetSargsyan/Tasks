@@ -4,8 +4,10 @@ let animal = [];
 let cat = []
 animal.canMove = true ;
 console.log(animal);
-Object.assign(cat , animal );
-console.log(cat);
+cat.__proto__ = animal;
+console.log(cat.canMove);
+
+
 
 
 

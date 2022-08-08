@@ -29,7 +29,7 @@ let numArr = [1,6,8,0,-2].map(num =>Boolean(num));
 console.log(numArr);
 
 
-
+//5.Sort the array [1,6,7,8,3,4,5,6] in descending order
 let array =[1,6,7,8,3,4,5,6].sort((a,b)=> b - a);
 console.log(array);
 

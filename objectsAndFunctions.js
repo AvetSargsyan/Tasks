@@ -23,7 +23,7 @@ console.log(sum(7, 4));
 
 //Your name is saved in the payment terminal, write a function to define the name in the terminal (if you entered your name, then hello + name, if not, then there is no such name)
 function verify(name) {
-  if (name == "Jack") {
+  if (name === "Jack") {
     console.log(`Hello ${name}`);
   } else {
     console.log(`There is no such name: ${name}`);
@@ -45,7 +45,7 @@ function primeNums(num) {
   }
   if (num > 1) {
     for (let i = 2; i < num; i++) {
-      if (num % i == 0) {
+      if (num % i === 0) {
         prime = false;
       }
     }

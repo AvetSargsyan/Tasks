@@ -12,7 +12,7 @@ console.log(num + bool);
 console.groupEnd();
 
 //2.Perform multiplication of various types (string * boolean, string * number, number * boolean)
-console.group("Multiplication")
+console.group("Multiplication");
 console.log(str * bool);
 console.log(str * num);
 console.log(num * bool);

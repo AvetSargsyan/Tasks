@@ -10,7 +10,7 @@ for (let i =0; i<movieNames.length; i++) {
 
 //2.Given an array of car manufacturers, convert the array to a string and back to an array
 let carManufac = ["Toyota", "Ford", "Honda"];
-console.log(carManufac.join().split());
+console.log(carManufac.join().split(","));
 
 
 
@@ -43,13 +43,11 @@ console.log(arrOne);
 
 
 //7.Write a function that takes two parameters - an array and a number and outputs the index of an array element equal to a number
-let arrTwo = [1,3,7,9,4,6,0];
-let num = 1;
-function out (arr,num){
-	console.log(arr.indexOf(num,0))  
-};
-out(arrTwo,num);
-
+let arrTwo = [1, 3, 7, 9, 4, 6, 0];
+function out(arr, num) {
+  console.log(arr.indexOf(num, 0));
+}
+out(arrTwo, 7);
 
 //8.Implement a loop that will print the number 'a' until it is less than 10
 let loop = (a) => {
@@ -66,32 +64,39 @@ loop(1);
 
 
 //9.Implement a loop that prints prime numbers to the console
-//I hope I understood the task correctly
-function primeNums (num) {
-    let prime = true;
-    if(num >1 ){
-        for(let i = 2; i<num ; i ++){
-            if(num % i == 0) {
-                prime = false;
-            };
-        };
-        if (prime) {
-            return num
-        }
-    };
-};
-let arrThree=[1,99,5,44,78,31,53,68,0,-6,2].filter(num=>{if(primeNums(num)) {
+function primeNums(num) {
+  let prime = true;
+  if (num > 1) {
+    for (let i = 2; i < num; i++) {
+      if (num % i == 0) {
+        prime = false;
+      }
+    }
+    if (prime) {
+      return true;
+    }
+  } else {
+    prime = false;
+  }
+}
+const arrThree = [1, 99, 5, 44, 78, 31, 53, 68, 0, -6, 2, -7].forEach((num) => {
+  if (primeNums(num)) {
     console.log(num);
-}});
+  }
+});
 
 
 
 //10.Implement a loop that prints odd numbers to the console
-function oddNums (num) {
-    if(num %2 !==0 && num !==2) {
-        return num
-    }
+function oddNums(num) {
+  if (num % 2 !== 0 && num !== 2) {
+    return true;
+  } else return false;
 };
-let arrFour=[1,2,3,99,5,0,44,-78,31,-53,68,1515252].filter(num=>{if(oddNums(num)) {
-    console.log(num);
-}});
+const arrFour = [1, 2, 3, 99, 5, 0, 44, -78, 31, -53, 68, 1515252].forEach(
+  (num) => {
+    if (oddNums(num)) {
+      console.log(num);
+    }
+  }
+);

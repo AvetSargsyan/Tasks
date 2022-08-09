@@ -1,0 +1,26 @@
+{
+  "name": "Task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "dev": "nodemon script.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AvetSargsyan/Tasks.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AvetSargsyan/Tasks.git/issues"
+  },
+  "homepage": "https://github.com/AvetSargsyan/Tasks.git#readme",
+  "dependencies": {
+    "nodemon": "^2.0.19"
+  },
+  "devDependencies": {
+    "fs-extra": "^10.1.0"
+  }
+}

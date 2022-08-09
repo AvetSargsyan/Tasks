@@ -7,7 +7,9 @@ try {
   console.log("Let must be declared before use");
 }
 try {
-  throw new Error(1 / 0);
-} catch {
-  console.log("Can't be divided by zero");
+  if (1 / 0 === Infinity) {
+    throw new SyntaxError("Can't be divided by zero");
+  }
+} catch (err) {
+  console.log(err.message);
 }

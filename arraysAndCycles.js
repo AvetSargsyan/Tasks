@@ -64,7 +64,6 @@ loop(1);
 
 //9.Implement a loop that prints prime numbers to the console
 function primeNums(num) {
-function primeNums(num) {
   if (num > 1) {
     for (let i = 2; i < num; i++) {
       if (num % i == 0) {

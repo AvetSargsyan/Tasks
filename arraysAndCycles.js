@@ -64,19 +64,15 @@ loop(1);
 
 //9.Implement a loop that prints prime numbers to the console
 function primeNums(num) {
-  let prime = true;
+function primeNums(num) {
   if (num > 1) {
     for (let i = 2; i < num; i++) {
       if (num % i == 0) {
-        prime = false;
+        return false;
       }
     }
-    if (prime) {
-      return true;
-    }
-  } else {
-    prime = false;
-  }
+    return true;
+  } else return false;
 }
 const arrThree = [1, 99, 5, 44, 78, 31, 53, 68, 0, -6, 2, -7].forEach((num) => {
   if (primeNums(num)) {
